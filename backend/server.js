@@ -35,6 +35,10 @@ app.get('/api/status', (req, res) => {
 // Error handler
 app.use(errorHandler);
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
