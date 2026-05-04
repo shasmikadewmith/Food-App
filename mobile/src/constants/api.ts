@@ -12,7 +12,7 @@ const DEV_API_URL = Platform.select({
 
 const PROD_API_URL = 'https://pure-adventure-production-bcc2.up.railway.app';
 
-export const API_BASE_URL = process.env.NODE_ENV === 'production' ? PROD_API_URL : DEV_API_URL;
+export const API_BASE_URL = __DEV__ ? DEV_API_URL : PROD_API_URL;
 
 export const ENDPOINTS = {
   AUTH: {
