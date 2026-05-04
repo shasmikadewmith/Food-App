@@ -1,8 +1,6 @@
 const Table = require('../models/Table');
 
-// @desc    Get all tables
-// @route   GET /api/tables
-// @access  Public
+//API fetches all tables and allows filtering by status and location
 const getTables = async (req, res) => {
   try {
     const { status, location } = req.query;
@@ -19,9 +17,7 @@ const getTables = async (req, res) => {
   }
 };
 
-// @desc    Get single table
-// @route   GET /api/tables/:id
-// @access  Public
+//This API retrieves a specific table using its ID.
 const getTable = async (req, res) => {
   try {
     const table = await Table.findById(req.params.id).populate(
@@ -37,9 +33,7 @@ const getTable = async (req, res) => {
   }
 };
 
-// @desc    Create a table
-// @route   POST /api/tables
-// @access  Private/Admin
+//create table
 const createTable = async (req, res) => {
   try {
     const table = await Table.create(req.body);
@@ -49,9 +43,7 @@ const createTable = async (req, res) => {
   }
 };
 
-// @desc    Update a table
-// @route   PUT /api/tables/:id
-// @access  Private/Admin
+//update table
 const updateTable = async (req, res) => {
   try {
     const table = await Table.findByIdAndUpdate(req.params.id, req.body, {
@@ -67,9 +59,7 @@ const updateTable = async (req, res) => {
   }
 };
 
-// @desc    Delete a table
-// @route   DELETE /api/tables/:id
-// @access  Private/Admin
+//delete table
 const deleteTable = async (req, res) => {
   try {
     const table = await Table.findByIdAndDelete(req.params.id);
@@ -82,9 +72,7 @@ const deleteTable = async (req, res) => {
   }
 };
 
-// @desc    Reserve a table
-// @route   PUT /api/tables/:id/reserve
-// @access  Private
+// Reserve a table(user)
 const reserveTable = async (req, res) => {
   try {
     const table = await Table.findById(req.params.id);
@@ -107,9 +95,7 @@ const reserveTable = async (req, res) => {
   }
 };
 
-// @desc    Release a table
-// @route   PUT /api/tables/:id/release
-// @access  Private/Admin
+// Release a table
 const releaseTable = async (req, res) => {
   try {
     const table = await Table.findById(req.params.id);
@@ -129,6 +115,7 @@ const releaseTable = async (req, res) => {
   }
 };
 
+//make contoller function access to routers
 module.exports = {
   getTables,
   getTable,
