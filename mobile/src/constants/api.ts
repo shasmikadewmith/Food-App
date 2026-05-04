@@ -10,7 +10,7 @@ const DEV_API_URL = Platform.select({
   default: 'http://localhost:5001',
 });
 
-const PROD_API_URL = 'https://pure-adventure-production-bcc2.up.railway.app';
+const PROD_API_URL = 'https://pure-adventure-production-bcc2.up.railway.app/api';
 
 export const API_BASE_URL = __DEV__ ? DEV_API_URL : PROD_API_URL;
 
