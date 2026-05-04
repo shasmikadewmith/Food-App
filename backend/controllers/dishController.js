@@ -36,6 +36,7 @@ const getDish = async (req, res) => {
   }
 };
 
+//create a dish
 // @desc    Create a dish
 // @route   POST /api/dishes
 // @access  Private/Admin
@@ -48,6 +49,7 @@ const createDish = async (req, res) => {
   }
 };
 
+//update a dish
 // @desc    Update a dish
 // @route   PUT /api/dishes/:id
 // @access  Private/Admin
@@ -66,6 +68,7 @@ const updateDish = async (req, res) => {
   }
 };
 
+//delete a dish
 // @desc    Delete a dish
 // @route   DELETE /api/dishes/:id
 // @access  Private/Admin
