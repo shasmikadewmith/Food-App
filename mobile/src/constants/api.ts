@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 // Use your machine's local IP for physical device
 // Change this IP if your network changes
-const LOCAL_IP = '192.168.1.121';
+const LOCAL_IP = '172.28.17.56';
 
 const DEV_API_URL = Platform.select({
   ios: `http://${LOCAL_IP}:5001`,
@@ -10,7 +10,9 @@ const DEV_API_URL = Platform.select({
   default: 'http://localhost:5001',
 });
 
-export const API_BASE_URL = DEV_API_URL;
+const PROD_API_URL = 'https://pure-adventure-production-bcc2.up.railway.app';
+
+export const API_BASE_URL = process.env.NODE_ENV === 'production' ? PROD_API_URL : DEV_API_URL;
 
 export const ENDPOINTS = {
   AUTH: {
