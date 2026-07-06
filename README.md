@@ -294,42 +294,6 @@ Create a Pull Request and describe the changes you made.
 
 ---
 
-# 📸 Screenshots
-
-Add your application screenshots here.
-
-Example:
-
-```
-screenshots/
-
-├── home.png
-├── menu.png
-├── cart.png
-├── checkout.png
-├── admin-dashboard.png
-```
-
----
-
-# 📌 Future Improvements
-
-- Online Payment Integration
-- Push Notifications
-- Live Delivery Tracking
-- Customer Reviews & Ratings
-- Favorite Foods
-- Coupon & Discount System
-- Dark Mode
-
----
-
-# 👥 Team
-
-Developed as part of the **WMT Food Delivery App** project.
-
----
-
 # 📄 License
 
 This project is intended for educational purposes.
